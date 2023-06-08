@@ -2199,6 +2199,7 @@ h6 {
   padding: 2.5rem 1rem;
   border-top: 1px solid #1f3d56;
   text-align: center;
+  background-color: black;
 }
 .footer-bottom-wrap-layout1 .container {
   display: flex;
