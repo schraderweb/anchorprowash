@@ -9573,10 +9573,11 @@ div#wrapper.open > .offcanvas-mask {
     align-items: center;
     justify-content: center;
     padding: 50px;
-    background-color: #445189;
   }
 
   .mobile_mode_section img {
     max-width: 300px;
+    height: 300px;
+    object-fit: cover;
   }
 }
