@@ -44,12 +44,16 @@ Congratulations! You've set up an Eleventy project. You can now start creating y
 
 ## Structure of the app
 
-Src->
+\Src->
 \includes
-\layouts
-base.layout # this is basic layout which your index.html is using
-footer.html # this is your seperated footer include
-header.html # this is your seperated header file nav in there
+
+- \layouts
+
+  -base.layout # this is basic layout which your index.html is using
+
+- footer.html # this is your seperated footer include
+
+- header.html # this is your seperated header file nav in there
 
 index.html # this file this main content file basic this the part of where your content is this part between header and footer
 
