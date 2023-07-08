@@ -1,20 +1,20 @@
 /*---------------------------------------------
 
-Template Name: Roof Builder, Renovation & Repair Services HTML Template 
+Template Name: Roof Builder, Renovation & Repair Services HTML Template
 Template URL: http://radiustheme.com/demo/html/roofit
 Description: Roof Builder, Renovation & Repair Services HTML Template
 Author: RadiusTheme
-Author URL: http://www.radiustheme.com 
-Version: 1.0 
+Author URL: http://www.radiustheme.com
+Version: 1.0
 
-===================   
+===================
 CSS INDEX
 ===================
 1. Typography
 2. Bootstrap Overwrite
     2.1 Grid
     2.2 Media Object
-3. Vendor Custom Style 
+3. Vendor Custom Style
     3.1 Nivo Slider
     3.2 Owl Carousel Nav Style
     3.3 Select 2 Style
@@ -49,11 +49,11 @@ CSS INDEX
     6.3 Margin
     6.4 Misc
     6.5 Padding
-    6.6 Position 
-    6.7 Text 
+    6.6 Position
+    6.7 Text
 
 /*=======================================================================
-1. Typography 
+1. Typography
 =========================================================================*/
 @font-face {
   font-family: "Roboto";
@@ -9582,3 +9582,87 @@ div#wrapper.open > .offcanvas-mask {
     object-fit: cover;
   }
 }
+.inptFld{
+  width: 100%;
+  height: 50px;
+  border: 0;
+  margin: 0 0 10px;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #000;
+  border: 1px solid #000000;
+}
+.inptBtn {
+  height: 50px;
+  border: 0;
+  background: #102353;
+  font-size: 14px;
+  color: #fff;
+  margin: auto;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+}
+.inptBtn:hover {
+  background: #1c4163;
+  color: white;
+}
+.contact-detail span a{
+font-size: 20px;
+padding: 6px 12px;
+color: #000;
+border-radius: 50%;
+margin: 0px 5px;
+}
+#demo {
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+
+.green{
+  background-color:#6fb936;
+}
+.thumb{
+  margin-bottom: 30px;
+}
+
+.page-top{
+  margin-top:85px;
+}
+
+
+img.zoom {
+  width: 100%;
+  height: 200px;
+  border-radius:5px;
+  object-fit:cover;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+}
+
+
+.transition {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.modal-header {
+
+  border-bottom: none;
+}
+.modal-title {
+  color:#000;
+}
+.modal-footer{
+  display:none;
+}
+
+
+

@@ -12,7 +12,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("src/css/");
   eleventyConfig.addWatchTarget("src/style.css");
   eleventyConfig.addWatchTarget("src/js/");
-
   return {
     dir: {
       input: 'src',
