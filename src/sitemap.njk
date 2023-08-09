@@ -1,101 +1,22 @@
 ---
 permalink: /sitemap.xml
-eleventyExcludeFromCollections: true
+sitemapIgnore: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://anchorprowash.com/</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/contact-us</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/about-us</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/service-area</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/gallery</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/house-washing</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/commercial-cleaning</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/roof-cleaning</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/gutter-cleaning</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/driveway-cleaning</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/paver-cleaning</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/sidewalk-cleaning</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/fence-cleaning</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/window-cleaning</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/dryer-vent-cleaning</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/testimonials</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anchorprowash.com/index.html</loc>
-  <lastmod>2023-08-07T19:55:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
+<?xml-stylesheet type="text/xsl" href="/assets/styles/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for item in collections.all %}
+{%- if item.data.sitemapIgnore !== true %}
+  <url>
+    <loc>{{ item.url | httpUrl }}</loc>
+    {% if item.data.premier.date -%}
+    <lastmod>{{ item.data.premier.date | dateDisplay("toISOString") }}</lastmod>
+    {%- else -%}
+    <lastmod>{{ item.date | dateDisplay("toISOString") }}</lastmod>
+    {%- endif %}
+    <changefreq>{{ item.data.changefreq | valueIfEmpty("monthly") }}</changefreq>
+    <priority>{{ item.data.priority | valueIfEmpty("0.5") }}</priority>
+  </url>
+{%- endif %}
+{%- endfor %}
 </urlset>
