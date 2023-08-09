@@ -1,22 +1,16 @@
 ---
 permalink: /sitemap.xml
-sitemapIgnore: true
+eleventyExcludeFromCollections: true
+
 ---
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/assets/styles/sitemap.xsl"?>
+<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for item in collections.all %}
-{%- if item.data.sitemapIgnore !== true %}
+  {% for page in collections.all %}
   <url>
-    <loc>{{ item.url | httpUrl }}</loc>
-    {% if item.data.premier.date -%}
-    <lastmod>{{ item.data.premier.date | dateDisplay("toISOString") }}</lastmod>
-    {%- else -%}
-    <lastmod>{{ item.date | dateDisplay("toISOString") }}</lastmod>
-    {%- endif %}
-    <changefreq>{{ item.data.changefreq | valueIfEmpty("monthly") }}</changefreq>
-    <priority>{{ item.data.priority | valueIfEmpty("0.5") }}</priority>
+    <loc>{{ site.url }}{{ page.url | url }}</loc>
+    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    <priority>{{ page.data.priority | default(0.5) }}</priority> 
+    
   </url>
-{%- endif %}
-{%- endfor %}
+  {% endfor %}
 </urlset>
