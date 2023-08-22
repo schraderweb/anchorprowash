@@ -9550,6 +9550,8 @@ div#wrapper.open > .offcanvas-mask {
 }
 .slides {
   position: relative;
+  width:100%;
+  height:600px;
 }
 .slides::after {
   content: "";
