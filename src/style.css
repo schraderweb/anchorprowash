@@ -9561,7 +9561,24 @@ div#wrapper.open > .offcanvas-mask {
   width: 100%;
   height: 100%;
 }
+.hero-main::before {
 
+  position: relative;
+}
+.hero-main::after {
+  content: "";
+  position:absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+
+.hero-main img{
+  width:100%;
+  height:600px;
+  object-fit: cover;
+}
 .mobile_mode_section {
   display: none;
 }
