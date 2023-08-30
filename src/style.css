@@ -693,6 +693,22 @@ h6 {
 3. Vendor Custom Style
 =========================================================================*/
 /*------------------- 3.1 Nivo Slider -------------------*/
+
+.hero-main{
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width:100%;
+  height:600px;
+  
+  
+  }
+  
+  .hero-main > img {
+    width:100%;
+    height:600px !important;
+  }
+
 .slider-area {
   position: relative;
 }
@@ -704,12 +720,27 @@ h6 {
   top: 50%;
   transform: translateY(-50%);
 }
+
+@media screen and (max-width:1420px) {
+  .hero-main{
+
+    height:500px;
+    
+    
+    }
+    
+    .hero-main > img {
+
+      height:500px !important;
+    }
+}
 @media only screen and (max-width: 767px) {
   .slider-area .nivo-directionNav a {
     visibility: hidden;
     opacity: 0;
   }
 }
+
 .slider-area .nivo-directionNav a.nivo-prevNav {
   left: 10%;
   width: 55px;
@@ -737,6 +768,8 @@ h6 {
   right: 0;
   transition: all 0.3s ease-out;
 }
+
+  
 @media only screen and (max-width: 991px) {
   .slider-area .nivo-directionNav a.nivo-prevNav {
     width: 50px;
@@ -9561,36 +9594,10 @@ div#wrapper.open > .offcanvas-mask {
   width: 100%;
   height: 100%;
 }
-.hero-main::before {
 
-  position: relative;
-}
-.hero-main::after {
-  content: "";
-  position:absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 100%;
-}
-
-
-.hero-main img{
-  width:100%;
-  height:600px;
-  object-fit: cover;
-}
-.mobile_mode_section {
-  display: none;
-}
-
-@media screen and (min-width:1500px){
-  .hero-main img{
-    width:100%;
-    height:600px;
-    object-fit: cover;
-  }
-}
   
+
+
 @media screen and (max-width: 720px) {
   .slider-area {
     display: none !important;
