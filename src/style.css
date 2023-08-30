@@ -9583,6 +9583,14 @@ div#wrapper.open > .offcanvas-mask {
   display: none;
 }
 
+@media screen and (min-width:1500px){
+  .hero-main img{
+    width:100%;
+    height:600px;
+    object-fit: cover;
+  }
+}
+  
 @media screen and (max-width: 720px) {
   .slider-area {
     display: none !important;
